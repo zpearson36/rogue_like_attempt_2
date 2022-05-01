@@ -15,3 +15,15 @@ function pixel_to_cell_y(pY)
 {
 	return floor(pY / CELLHEIGHT)
 }
+
+enum EQUIPMENTPOSITIONS
+{
+	NOTEQUIPABLE,
+	HEAD,
+	TORSO,
+	LEGS,
+	FEET,
+	GLOVES,
+	DOMINANTHAND,
+	OFFHAND,
+}
