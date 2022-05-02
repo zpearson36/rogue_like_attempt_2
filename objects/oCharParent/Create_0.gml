@@ -4,7 +4,6 @@ x = cell_to_pixel_x(pixel_to_cell_x(x))
 y = cell_to_pixel_y(pixel_to_cell_y(y))
 
 inventory = instance_create_layer(x, y, layer, oInventory)
-equipment = instance_create_layer(x, y, layer, oEquipment)
 _health = 3
 
 enum CHARSTATES
@@ -39,7 +38,7 @@ function movement(dX, dY)
 									  oCharParent, false, true)
 	if(col_obj != noone)
 	{
-		col_obj._health -= equipment.get_dominant_hand().get_damage(false)
+		col_obj._health -= inventory.equipment.get_dominant_hand().get_damage(false)
 	}
 	else
 	{

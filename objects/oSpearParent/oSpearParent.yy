@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEquipmentParent",
-    "path": "objects/oEquipmentParent/oEquipmentParent.yy",
+    "name": "oWeaponParent",
+    "path": "objects/oWeaponParent/oWeaponParent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -22,16 +22,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Armour",
-    "path": "folders/Objects/Items/equipables/Armour.yy",
+    "name": "Spears",
+    "path": "folders/Objects/Items/equipables/WEAPONS/Spears.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oArmourParent",
+  "name": "oSpearParent",
   "tags": [],
   "resourceType": "GMObject",
 }

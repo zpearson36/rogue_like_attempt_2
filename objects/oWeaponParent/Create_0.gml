@@ -2,6 +2,7 @@
 // You can write your code in this editor
 event_inherited()
 type = EQUIPMENTPOSITIONS.DOMINANTHAND
+name = "Unarmed"
 min_damage = 1
 max_damage = 2
 
@@ -9,6 +10,9 @@ crit_multiplyer = 1.5
 
 min_protection = 0
 max_protection = 1
+
+type_string = "Unarmed"
+description = "No Weapon Equiped"
 
 function get_damage(is_crit)
 {

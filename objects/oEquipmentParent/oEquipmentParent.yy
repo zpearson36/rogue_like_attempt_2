@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEquipmentParent",
-    "path": "objects/oEquipmentParent/oEquipmentParent.yy",
+    "name": "oItem",
+    "path": "objects/oItem/oItem.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -20,18 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Armour",
-    "path": "folders/Objects/Items/equipables/Armour.yy",
+    "name": "equipables",
+    "path": "folders/Objects/Items/equipables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oArmourParent",
+  "name": "oEquipmentParent",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(gui.is_empty()) gui.add_display(button)
 switch(state)
 {
 	case GAMESTATES.PLAYERTURN:

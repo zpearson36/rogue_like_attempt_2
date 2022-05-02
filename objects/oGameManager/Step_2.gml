@@ -24,7 +24,12 @@ switch(state)
 		{
 			other.action_points += actions
 		}
-		if(action_points == 0) other.state = GAMESTATES.PLAYERTURN
+		if(action_points == 0)
+		{
+			other.state = GAMESTATES.PLAYERTURN
+			gui.clear_display()
+			gui.add_display(button)
+		}
 		selected = noone
 		break;
 	}
