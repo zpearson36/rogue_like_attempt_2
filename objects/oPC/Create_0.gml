@@ -10,3 +10,18 @@ inventory.add_item(
 inventory.add_item(
     instance_create_layer(x, y, layer, oSpearParent)
 )
+inventory.add_item(
+    instance_create_layer(x, y, layer, oBoots)
+)
+inventory.add_item(
+    instance_create_layer(x, y, layer, oGloves)
+)
+inventory.add_item(
+    instance_create_layer(x, y, layer, oTshirt)
+)
+inventory.add_item(
+    instance_create_layer(x, y, layer, oPants)
+)
+inventory.add_item(
+    instance_create_layer(x, y, layer, oCap)
+)

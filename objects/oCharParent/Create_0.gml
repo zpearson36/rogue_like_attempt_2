@@ -38,7 +38,12 @@ function movement(dX, dY)
 									  oCharParent, false, true)
 	if(col_obj != noone)
 	{
-		col_obj._health -= inventory.equipment.get_dominant_hand().get_damage(false)
+		if(irandom(19) + 1 > col_obj.inventory.equipment.get_armour())
+		{
+			show_debug_message("Hit")
+			col_obj._health -= inventory.equipment.get_dominant_hand().get_damage(false)
+		}
+		else show_debug_message("Miss")
 	}
 	else
 	{
