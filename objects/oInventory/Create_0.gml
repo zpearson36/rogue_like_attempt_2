@@ -12,6 +12,17 @@ function add_item(obj)
 	panel.text = obj.name
 	panel.info_window = obj.info_window
 	inv_menu.add_panel(panel, obj.id)
+	if(object_is_ancestor(obj.object_index, oEquipmentParent))
+	{
+		panel.eq = equipment
+		panel.obj2 = obj
+		function tmp()
+		{
+			show_debug_message("FUCKOFF")
+			eq.equip(obj2)
+		}
+		panel.action = tmp
+	}
 }
 
 function remove_item(obj)

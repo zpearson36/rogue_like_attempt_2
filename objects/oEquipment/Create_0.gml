@@ -7,6 +7,8 @@ pantsless = instance_create_layer(x, y, layer, oLegsParent)
 barefoot  = instance_create_layer(x, y, layer, oFootParent)
 no_gloves = instance_create_layer(x, y, layer, oGloveParent)
 unarmed   = instance_create_layer(x, y, layer, oWeaponParent)
+unarmed2   = instance_create_layer(x, y, layer, oWeaponParent)
+unarmed2.type = EQUIPMENTPOSITIONS.OFFHAND
 
 eq_menu = instance_create_layer(x, y, layer, oPanelWindow)
 
@@ -16,7 +18,7 @@ equipment[? EQUIPMENTPOSITIONS.LEGS]         = pantsless
 equipment[? EQUIPMENTPOSITIONS.FEET]         = barefoot
 equipment[? EQUIPMENTPOSITIONS.GLOVES]       = no_gloves
 equipment[? EQUIPMENTPOSITIONS.DOMINANTHAND] = unarmed
-equipment[? EQUIPMENTPOSITIONS.OFFHAND]      = unarmed
+equipment[? EQUIPMENTPOSITIONS.OFFHAND]      = unarmed2
 
 head_panel = instance_create_layer(x, y, layer, oClickablePanel)
 head_panel.text = "Head: " + equipment[? EQUIPMENTPOSITIONS.HEAD].name
@@ -65,36 +67,43 @@ function equip(obj)
 		{
 			case EQUIPMENTPOSITIONS.HEAD:
 			{
+				panel.unequip = no_helmut
 				text += "Head: "
 				break
 			}
 			case EQUIPMENTPOSITIONS.TORSO:
 			{
+				panel.unequip = shirtless
 				text += "Torso: "
 				break
 			}
 			case EQUIPMENTPOSITIONS.LEGS:
 			{
+				panel.unequip = pantsless
 				text += "Legs: "
 				break
 			}
 			case EQUIPMENTPOSITIONS.FEET:
 			{
+				panel.unequip = no_gloves
 				text += "Feet: "
 				break
 			}
 			case EQUIPMENTPOSITIONS.GLOVES:
 			{
+				panel.unequip = barefoot
 				text += "Gloves: "
 				break
 			}
 			case EQUIPMENTPOSITIONS.DOMINANTHAND:
 			{
+				panel.unequip = unarmed
 				text += "Dominant Hand: "
 				break
 			}
 			case EQUIPMENTPOSITIONS.OFFHAND:
 			{
+				panel.unequip = unarmed2
 				text += "Off Hand: "
 				break
 			}
@@ -103,6 +112,13 @@ function equip(obj)
 		eq_menu.add_panel(panel, obj.type)
 		equipment[? obj.type] = obj
 		obj.equiped = true
+		panel.eq = self
+		function tmp_func()
+		{
+			eq.equip(unequip)
+		}
+		panel.action = tmp_func
+		
 	}
 }
 
