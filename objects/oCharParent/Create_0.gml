@@ -38,7 +38,7 @@ function movement(dX, dY)
 									  oCharParent, false, true)
 	if(col_obj != noone)
 	{
-		if(irandom(19) + 1 > col_obj.inventory.equipment.get_armour())
+		if(irandom(99) + 1 > 50 + col_obj.get_armour_level())
 		{
 			show_debug_message("Hit")
 			col_obj._health -= inventory.equipment.get_dominant_hand().get_damage(false)
@@ -50,4 +50,9 @@ function movement(dX, dY)
 		x += dX * CELLWIDTH
 		y += dY * CELLHEIGHT
 	}
+}
+
+function get_armour_level()
+{
+	return inventory.equipment.get_armour()
 }
